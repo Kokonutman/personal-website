@@ -1,0 +1,38 @@
+---
+const experiences = [
+  {
+    title: 'Senior Software Engineer',
+    company: 'Company Name',
+    period: '2020 - Present',
+    description: 'Led development of scalable web applications using React, Node.js, and AWS.',
+    achievements: [
+      'Improved application performance by 40%',
+      'Mentored junior developers',
+      'Implemented CI/CD pipelines'
+    ]
+  },
+  // Add more experiences here
+];
+---
+
+<section id="experience" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-primary mb-12 text-center">Experience</h2>
+    
+    <div class="max-w-3xl mx-auto space-y-12">
+      {experiences.map(exp => (
+        <div class="border-l-4 border-primary pl-6 relative">
+          <div class="absolute w-4 h-4 bg-primary rounded-full -left-[10px] top-0"></div>
+          <h3 class="text-xl font-semibold text-primary">{exp.title}</h3>
+          <p class="text-secondary mb-2">{exp.company} • {exp.period}</p>
+          <p class="text-gray-600 mb-4">{exp.description}</p>
+          <ul class="list-disc list-inside text-gray-600">
+            {exp.achievements.map(achievement => (
+              <li>{achievement}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

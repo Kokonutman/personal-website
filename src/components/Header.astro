@@ -1,0 +1,29 @@
+---
+const navItems = [
+  { label: 'About', href: '#about' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Contact', href: '#contact' }
+];
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm border-b border-gray-200">
+  <nav class="container mx-auto px-6 py-4">
+    <div class="flex items-center justify-between">
+      <a href="/" class="text-xl font-bold text-primary">Your Name</a>
+      
+      <ul class="hidden md:flex space-x-8">
+        {navItems.map(item => (
+          <li>
+            <a 
+              href={item.href}
+              class="text-gray-600 hover:text-primary transition-colors"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </nav>
+</header>

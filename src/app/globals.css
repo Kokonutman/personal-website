@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #0f172a;
+  --secondary: #64748b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.glass-card {
+  @apply bg-white/70 backdrop-blur-lg;
+}
+
+.hover-card {
+  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-primary via-blue-600 to-purple-600 bg-clip-text text-transparent;
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-r from-primary to-blue-600;
+}
+
+.social-icon {
+  @apply w-10 h-10 flex items-center justify-center rounded-lg text-gray-600 hover:text-primary hover:bg-gray-100 transition-all duration-300;
+}
+
+.nav-link {
+  @apply text-gray-600 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full;
+}
+
+.page-gradient {
+  @apply bg-gradient-to-b from-gray-50 via-emerald-50/30 to-cyan-50/30;
+}

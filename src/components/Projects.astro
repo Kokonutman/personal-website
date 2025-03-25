@@ -1,0 +1,83 @@
+---
+const projects = [
+  {
+    title: 'AI-Powered Study Assistant',
+    devpost: 'https://devpost.com/software/study-ai',
+    description: 'An intelligent study companion that uses natural language processing to help students learn more effectively.',
+    technologies: ['React', 'Python', 'OpenAI API', 'MongoDB'],
+    achievements: [
+      'Won "Best Use of AI" at HackMIT 2023',
+      'Over 1,000 active student users',
+      'Featured on Devpost homepage'
+    ]
+  },
+  {
+    title: 'EcoTrack',
+    devpost: 'https://devpost.com/software/ecotrack',
+    description: 'Mobile app that helps users track and reduce their carbon footprint through gamification and social features.',
+    technologies: ['React Native', 'Node.js', 'PostgreSQL', 'AWS'],
+    achievements: [
+      'First Place Winner at ClimateHacks 2023',
+      'Integrated with 5+ sustainability APIs',
+      '10K+ downloads on App Store'
+    ]
+  },
+  {
+    title: 'HealthChain',
+    devpost: 'https://devpost.com/software/healthchain',
+    description: 'Blockchain-based healthcare records management system ensuring secure and efficient medical data sharing.',
+    technologies: ['Solidity', 'Web3.js', 'Next.js', 'Ethereum'],
+    achievements: [
+      'Runner-up at ETHGlobal 2023',
+      'Implemented HIPAA-compliant data encryption',
+      'Partnered with 3 local clinics for pilot program'
+    ]
+  }
+];
+---
+
+<section id="projects" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-primary mb-12 text-center">Featured Projects</h2>
+    
+    <div class="max-w-4xl mx-auto space-y-12">
+      {projects.map(project => (
+        <div class="bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
+          <div class="flex justify-between items-start mb-4">
+            <h3 class="text-2xl font-semibold text-primary">{project.title}</h3>
+            <a 
+              href={project.devpost}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm px-4 py-2 bg-primary/10 text-primary rounded-full hover:bg-primary/20 transition-colors"
+            >
+              View on Devpost
+            </a>
+          </div>
+          
+          <p class="text-gray-600 mb-6">{project.description}</p>
+          
+          <div class="mb-6">
+            <h4 class="text-sm font-semibold text-secondary mb-2">Technologies Used</h4>
+            <div class="flex flex-wrap gap-2">
+              {project.technologies.map(tech => (
+                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+          
+          <div>
+            <h4 class="text-sm font-semibold text-secondary mb-2">Key Achievements</h4>
+            <ul class="list-disc list-inside text-gray-600 space-y-1">
+              {project.achievements.map(achievement => (
+                <li>{achievement}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
