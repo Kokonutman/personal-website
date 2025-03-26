@@ -634,6 +634,12 @@ video {
 .z-50 {
   z-index: 50;
 }
+.order-1 {
+  order: 1;
+}
+.order-2 {
+  order: 2;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -998,9 +1004,6 @@ video {
 .pt-24 {
   padding-top: 6rem;
 }
-.text-left {
-  text-align: left;
-}
 .text-center {
   text-align: center;
 }
@@ -1320,6 +1323,19 @@ html {
 
 @media (min-width: 768px) {
 
+  .md\:order-1 {
+    order: 1;
+  }
+
+  .md\:order-2 {
+    order: 2;
+  }
+
+  .md\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -1352,12 +1368,28 @@ html {
     flex-direction: row;
   }
 
+  .md\:items-start {
+    align-items: flex-start;
+  }
+
   .md\:items-center {
     align-items: center;
   }
 
+  .md\:justify-start {
+    justify-content: flex-start;
+  }
+
   .md\:justify-end {
     justify-content: flex-end;
+  }
+
+  .md\:justify-between {
+    justify-content: space-between;
+  }
+
+  .md\:text-left {
+    text-align: left;
   }
 
   .md\:text-2xl {
